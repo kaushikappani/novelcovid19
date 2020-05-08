@@ -1,0 +1,20 @@
+{
+  "name": "corona-virus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "A kaushik",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "novelcovid": "^1.2.7",
+    "push.js": "^1.0.12",
+    "react-loading-animation": "^1.4.0",
+    "web-push": "^3.4.3"
+  }
+}

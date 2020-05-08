@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title><%=countryDisplay%></title>
+  <link rel="icon" href="https://img.icons8.com/doodle/25/000000/coronavirus.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live covid-19 updates,covid19express">
+  <meta name="keywords" content="covid19, coronavirus,liveupdates,positive,deaths,dearth percent,country">
+  <meta name="author" content="Kaushik Appani">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style type="text/css">
+    .my-card {
+      position: absolute;
+      left: 40%;
+      top: -20px;
+      border-radius: 50%;
+    }
+
+    .form-inline {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+    }
+  </style>
+  <script type="text/javascript">
+    window.alert = function() {};
+    var defaultCSS = document.getElementById('bootstrap-css');
+
+    function changeCSS(css) {
+      if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+      else $('head > link').filter(':first').replaceWith(defaultCSS);
+    }
+    $(document).ready(function() {
+      var iframe_height = parseInt($('html').height());
+      window.parent.postMessage(iframe_height, 'https://bootsnipp.com');
+    });
+  </script>
+  <link rel="stylesheet" href="css/stylesmin.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165687949-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165687949-1');
+  </script>
+</head>
+
+<body onload="onLoad()">
+  <div class="loader" style="text-align:center">
+    <p>loading...</p>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+">
+  <nav style="padding:0px;" class="navbar navbar-expand-sm navbar-light bg-light">
+    <a href="/" class="navbar-brand" style="background-color:transparent;"><img src="https://img.icons8.com/doodle/48/000000/earth-care.png" /> World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="https://img.icons8.com/nolan/50/search.png" />
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0" action="/" method="post">
+        <input style="width:280px;" class="form-control mr-sm-2" type="text" name="country" value="" placeholder="country search" required>
+        <button class="btn  my-2 my-sm-0" type="submit" name="button"><img src="https://img.icons8.com/doodle/48/000000/search.png" /></button>
+      </form>
+    </div>
+  </nav>
+  <div class="" style="text-align:center">
+    <img src="image.png" alt="" style="padding-bottom:15px;">
+    <p style="margin-bottom:0px;"><img src="https://img.icons8.com/doodle/48/000000/alarm-clock.png" /> last updated <%=lastUpdated%></p>
+    <img style="height:20px;width:70px;" src="https://media.giphy.com/media/2A2DRLcRSCWtvNBv1f/giphy.gif" alt="">
+  </div>
+  <div class="" style="text-align:center">
+    <h2><img style="width:40px;height:30px;" src="<%=flagUrl%>" /> <%=countryDisplay%></h2>
+  </div>
+  <div class="jumbotron" style="padding-right:0px;">
+    <div class="row w-100">
+      <div class="col-md-4" style="padding-right:0px;">
+        <div class="card border-info mx-sm-1 p-3">
+          <div class="card border-info shadow text-info p-3 my-card"><img src="https://img.icons8.com/doodle/25/000000/coronavirus.png" /></span></div>
+          <div class="text-info text-center mt-3">
+            <h4>Positive Cases</h4>
+          </div>
+          <div class="text-info text-center mt-2">
+            <h1 style="margin-bottom:0px;"><%= conformed%></h1>
+          </div>
+          <div class="text-info text-center mt-3">
+            <h6 style="margin-bottom:0px;">Active Cases</h6>
+          </div>
+          <div class="text-info text-center mt-2">
+            <p style="margin-bottom:0px;"><%=active%></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-right:0px;">
+        <div class="card border-success mx-sm-1 p-3">
+          <div class="card border-success shadow text-success p-3 my-card"><img src="https://img.icons8.com/doodle/25/000000/comedy.png" /></span></div>
+          <div class="text-success text-center mt-3">
+            <h4>Recovered</h4>
+          </div>
+          <div class="text-success text-center mt-2">
+            <h1 style="margin-bottom:0px;"><%=recoveres%></h1>
+          </div>
+          <div class="text-success text-center mt-3">
+            <h6 style="margin-bottom:0px;">Recovery Rate</h6>
+          </div>
+          <div class="text-success text-center mt-2">
+            <p style="margin-bottom:0px;"><%=recoveredPer%>%</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-right:0px;">
+        <div class="card border-danger mx-sm-1 p-3">
+          <div class="card border-danger shadow text-danger p-3 my-card"><img src="https://img.icons8.com/doodle/25/000000/day-of-the-dead.png" /></span></div>
+          <div class="text-danger text-center mt-3">
+            <h4>Deaths</h4>
+          </div>
+          <div class="text-danger text-center mt-2">
+            <h1 style="margin-bottom:0px;"><%=deaths%></h1>
+          </div>
+          <div class="text-danger text-center mt-3">
+            <h6 style="margin-bottom:0px;">Death Rate</h6>
+          </div>
+          <div class="text-danger text-center mt-2">
+            <p style="margin-bottom:0px;"><%=deathsPer%>%</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-right:0px;" style="overflow:none">
+        <div class="card border-info mx-sm-1 p-3">
+          <div id="piechart" style="padding-right:0px;">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-right:0px;" style="overflow:none">
+        <div class="card border-success mx-sm-1 p-3">
+          <div id="chart_div2" style="padding-right:0px;">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="padding-right:0px;" style="overflow:none">
+        <div class="card border-danger mx-sm-1 p-3">
+          <div id="chart_div1" style="padding-right:0px;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:30px;margin-bottom: 0px;">Data source: <a style="background-color:transparent;"
+        href="https://covid19.mathdro.id/api/countries/<%=countryDisplay%>">https://covid19.mathdro.id/api/countries/<%=countryDisplay%></a> </p>
+  </div>
+  <div class="row">
+    <div class="col-md-12" style="text-align:center">
+      <img style="width:100%;max-width:500px;" src="92.jpg" alt="">
+    </div>
+  </div>
+  <script type="text/javascript">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Percent');
+      data.addRows([
+        ['World', <%=deathsPerW%> ],
+        ['<%=countryDisplay%>', <%=deathsPer%> ],
+      ]);
+
+
+      var options = {
+        'title': 'Dearth Rate Comparasion',
+        'width': 320,
+        'height': 210,
+        'legend': 'left',
+        'is3D': true,
+        colors: ['red']
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+
+    google.charts.setOnLoadCallback(drawChart);
+
+
+    function drawChart() {
+    var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Percent');
+      data.addRows([
+        ['World', <%=recoveredPerW%> ],
+        ['<%=countryDisplay%>', <%=recoveredPer%> ],
+      ]);
+
+
+      var options = {
+        'title': 'Recovery Rate Comparasion',
+        'width': 320,
+        'height': 210,
+        'legend': 'left',
+        'is3D': true,
+        colors: ['green'],
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div2'));
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Percent'],
+        ['Others', <%=others%> ],
+        ['<%=countryDisplay%>', <%=countryactive%> ],
+      ]);
+
+      var options = {
+        title: 'Positive Cases',
+        'width': 320,
+        'height': 210,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    function onLoad() {
+      document.querySelector('.loader').style.display = "none";
+    }
+  </script>
+</body>
+<footer>
+  <p style="text-align:center">Made with ❤ by Kaushik Appani</p>
+  <div class="col-md-12" style="text-align:center; padding-bottom:10px;">
+    <ul class="social-network social-circle">
+      <li><a href="https://www.facebook.com/kaushikappani/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://www.instagram.com/kaushikappani/" class="icoTwitter" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://github.com/kaushikappani" class="icoGoogle" title="Github"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/kaushik-appani-921345152/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+</html>
