@@ -15,6 +15,7 @@
     "novelcovid": "^1.2.7",
     "push.js": "^1.0.12",
     "react-loading-animation": "^1.4.0",
-    "web-push": "^3.4.3"
+    "web-push": "^3.4.3",
+    "node-fetch": ">=2.6.1"
   }
 }
