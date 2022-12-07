@@ -9,9 +9,9 @@
   "author": "A kaushik",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "ejs": "^3.0.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "novelcovid": "^1.2.7",
     "push.js": "^1.0.12",
     "react-loading-animation": "^1.4.0",
